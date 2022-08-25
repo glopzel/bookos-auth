@@ -1,0 +1,44 @@
+#submit-btn {
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+/* #submit-btn:hover {
+    background: hsl(207, 90%, 74%);
+} */
+
+.read, .delete {
+    cursor: pointer;
+    /* border: 1px solid black;
+    background: transparent; */
+}
+
+/* .read:hover {
+    background: green;
+} */
+
+input[type=text]:focus {
+    border-bottom: 1px solid hsl(207, 90%, 54%) !important;
+}
+
+.btns-update {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hidden {
+    display: none;
+}
+
+.notHidden {
+    display: inline-block;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-container .card {
+    width: 20%;
+}
