@@ -11,7 +11,6 @@ module.exports = {
                 totalBooks: allBooks, 
                 booksToRead: booksUnread
             })
-            // , {totalBooks: allBooks, booksToRead: booksUnread}
         } catch(err) {
             console.log(err)
         }
@@ -24,7 +23,6 @@ module.exports = {
                 bookAuthor: req.body.bookAuthor, 
                 read: false,
             })
-            // console.log(req.body.bookTitle)
             res.redirect('/books')
         } catch(err) {
             if (err) return res.status(500).send(err);
