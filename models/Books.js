@@ -13,6 +13,10 @@ const BookSchema = new mongoose.Schema({
     read: {
         type: Boolean,
         required: true,
+    },
+    userId: {
+        type: String,
+        required: true
     }
 })
 
