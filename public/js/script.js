@@ -16,7 +16,9 @@ Array.from(deleteBtn).forEach(element => {
 
 async function markRead() {
     // get the mongo id
-    const bookID = this.parentNode.parentNode.childNodes[3].dataset.id
+    // const bookID = this.parentNode.parentNode.childNodes[3].dataset.id
+    const bookID = this.parentNode.parentNode.dataset.id
+    // console.log(this.parentNode.parentNode.dataset.id)
 
     try {
         const response = await fetch('books/markRead', {
@@ -34,7 +36,8 @@ async function markRead() {
 }
 
 async function markUnread() {
-    const bookID = this.parentNode.parentNode.childNodes[3].dataset.id
+    // const bookID = this.parentNode.parentNode.childNodes[3].dataset.id
+    const bookID = this.parentNode.parentNode.dataset.id
 
     try {
         const response = await fetch('books/markUnread', {
@@ -52,7 +55,8 @@ async function markUnread() {
 }
 
 async function deleteBook() {
-    const bookID = this.parentNode.parentNode.childNodes[3].dataset.id
+    // const bookID = this.parentNode.parentNode.childNodes[3].dataset.id
+    const bookID = this.parentNode.parentNode.dataset.id
 
     try {
         const response = await fetch('books/deleteBook', {

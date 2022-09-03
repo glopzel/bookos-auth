@@ -10,7 +10,6 @@ const dotenv = require('dotenv');
 const passport = require('passport')
 const session = require('express-session')
 const mongoose = require('mongoose')
-// const MongoStore = require('connect-mongo')(session)
 const MongoStore = require('connect-mongo')
 const flash = require('express-flash')
 const logger = require('morgan')

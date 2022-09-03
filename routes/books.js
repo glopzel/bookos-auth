@@ -3,7 +3,7 @@ const router = express.Router()
 const booksController = require('../controllers/booksControl')
 const { ensureAuth } = require('../middlewares/auth')
 
-router.get('/books', booksController.getBooks)
+router.get('/books', ensureAuth, booksController.getBooks)
 
 router.post('/books/addBook', booksController.addBook)
 

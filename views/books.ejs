@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books</title>
 
-    <!-- Compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
-
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -21,11 +18,16 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <div class="logout-container flex justify-end p-5">
+        <a href="/logout" class="btn btn-error">Logout</a>
+    </div>
+    
     <main class="flex flex-col items-center">
-        <div class="mt-8 ml-8 mb-5 text-5xl">
-            <h1>
-                Books
+        <div class="mb-5">
+            <h1 class="text-5xl text-center">
+                Book Tracker
             </h1>
+            <h2 class="text-center text-2xl">Sup <%= user.userName %>, these are your books. You have <%= booksToRead %> books left to read</h2>
         </div>
         
         <div class="container flex justify-center">
@@ -40,16 +42,17 @@
             </form>
         </div>
         
-        <div class="container border border-blue-500">
+        <div class="card-container justify-center">
             <% totalBooks.forEach(element => { %>
-            <div class="card w-96 bg-base-100 shadow-xl image-full card-content m-6 <%= element.read === true ? 'bg-success' : 'white'%>" data-id="<%=element._id%>">
+            <div class="card w-96 bg-base-100 shadow-xl image-full card-content m-6 <%= element.read === true ? 'border border-green-500': 'border'%>">
+                <!-- on class: <%= element.read === true ? 'bg-success' : 'white'%> -->
                 <!-- <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure> -->
-                <div class="card-body">
+                <div class="card-body" data-id="<%=element._id%>">
                   <h2 class="card-title"><%= element.bookTitle %></h2>
                   <p><%= element.bookAuthor %></p>
                   <div class="card-actions justify-end btns-update">
                     <!-- this will always be there -->
-                    <button class="btn btn-outline btn-error">
+                    <button class="delete btn btn-outline btn-error">
                         Delete
                     </button>
 

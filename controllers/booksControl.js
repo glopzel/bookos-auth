@@ -4,12 +4,14 @@ module.exports = {
     // get number of books read maybe
     getBooks: async (req, res) => {
         try {
-            const allBooks = await Book.find()
+            const allBooks = await Book.find({userId: req.user.id})
+            const booksLeft = await Book.countDocuments({userId: req.user.id, read: false})
             
-            const booksUnread = await Book.countDocuments({read: false})
+            // const booksUnread = await Book.countDocuments({read: false})
             res.render('books.ejs', {
+                user: req.user,
                 totalBooks: allBooks, 
-                booksToRead: booksUnread
+                booksToRead: booksLeft
             })
         } catch(err) {
             console.log(err)
@@ -22,6 +24,7 @@ module.exports = {
                 bookTitle: req.body.bookTitle, 
                 bookAuthor: req.body.bookAuthor, 
                 read: false,
+                userId: req.user.id
             })
             res.redirect('/books')
         } catch(err) {

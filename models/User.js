@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
   password: String
 })
 
-
+// password will not be in plain text, so bob is safe
 // Password hash middleware. 
  UserSchema.pre('save', function save(next) {
   const user = this
