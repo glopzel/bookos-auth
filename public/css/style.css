@@ -3,13 +3,9 @@
     margin-top: 1em;
 }
 
-.read, .delete {
+/* .read, .delete {
     cursor: pointer;
-}
-
-input[type=text]:focus {
-    border-bottom: 1px solid hsl(207, 90%, 54%) !important;
-}
+} */
 
 .btns-update {
     display: flex;
@@ -29,6 +25,6 @@ input[type=text]:focus {
     flex-wrap: wrap;
 }
 
-.card-container .card {
+/* .card-container .card {
     width: 20%;
-}
+} */

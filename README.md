@@ -10,7 +10,7 @@ There's no live preview
 
 ## Tech used
 
-Mongoose/Mongo, Express, EJS, Materialize CSS
+Mongoose/Mongo, Express, EJS, Materialize CSS, bcrypt, express-flash, express-session, morgan, passport, validator.
 
 ## Future plans
 

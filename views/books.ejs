@@ -7,56 +7,73 @@
     <title>Books</title>
 
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <main>
-        <div class="container header blue-text lighten-3">
+    <main class="flex flex-col items-center">
+        <div class="mt-8 ml-8 mb-5 text-5xl">
             <h1>
                 Books
             </h1>
         </div>
         
-        <div class="container">
+        <div class="container flex justify-center">
             <form action="/books/addBook" method="post">
-                <div class="row">
-                    <input type="text" placeholder="Enter Book Title" name="bookTitle" id="title">
+
+                    <input type="text" placeholder="Enter Book Title" name="bookTitle" id="title" class="input input-bordered input-secondary max-w-xs mr-5">
    
-                    <input type="text" placeholder="Enter Book Author" name="bookAuthor" id="author">
+                    <input type="text" placeholder="Enter Book Author" name="bookAuthor" id="author" class="input input-bordered input-secondary max-w-xs mr-5">
                         
-                    <button id="submit-btn" type="submit" class="center white-text blue btn">Submit</button>
-                </div>
+                    <button id="submit-btn" type="submit" class="btn btn-secondary">Submit</button>
+
             </form>
         </div>
         
+        <div class="container border border-blue-500">
+            <% totalBooks.forEach(element => { %>
+            <div class="card w-96 bg-base-100 shadow-xl image-full card-content m-6 <%= element.read === true ? 'bg-success' : 'white'%>" data-id="<%=element._id%>">
+                <!-- <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure> -->
+                <div class="card-body">
+                  <h2 class="card-title"><%= element.bookTitle %></h2>
+                  <p><%= element.bookAuthor %></p>
+                  <div class="card-actions justify-end btns-update">
+                    <!-- this will always be there -->
+                    <button class="btn btn-outline btn-error">
+                        Delete
+                    </button>
 
-        <div class="container">
-            <!-- <ul>
-                <% totalBooks.forEach((element) => { %>
-                    <li>
-                        <span><%= element.bookTitle %></span>
-                        <span><%= element.bookAuthor %></span>
-                        <button class="read">
-                            <i class="tiny fa fa-check"></i>
-                        </button>
-                        <button class="delete">
-                            <i class="tiny fa fa-times"></i>
-                        </button>
-                    </li>
-                <% }) %>
-            </ul> -->
+                    <!-- if it is read, then dont hide it -->
+                    <button class="unread btn btn-outline btn-warning <%=element.read === false ? 'hidden' : 'notHidden' %>">
+                        UNREAD
+                    </button>
 
+                    <!-- if it is read then hide it -->
+                    <button class="read btn btn-outline btn-success <%=element.read === true ? 'hidden' : 'notHidden' %>">
+                        READ
+                    </button>
+                  </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        
+
+        <!-- <div class="container">
             <div class="row">
                 <% totalBooks.forEach(element => { %>
                     <div class="col s12 m6">
                         <div class="card">
-                            <div class="card-image">
-                                <img src="https://picsum.photos/300/300" alt="">
-                            </div>
                         
                             <div class="card-content <%= element.read === true ? 'green lighten-4' : 'white'%>" data-id="<%=element._id%>">
                                 <span class="card-title"><%= element.bookTitle %></span>
@@ -77,9 +94,9 @@
                     </div>
                 </div>
                 <% }) %>
-            </div>
+            </div> -->
             
-        </div>
+        <!-- </div> -->
     </main>
 
 

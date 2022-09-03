@@ -5,19 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="flex justify-center items-center h-screen">
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/signup" method="POST">
-        <input type="text" name="userName" placeholder="User Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="submit">
-    </form>
+    <div class="w-1/2">
+        <h1 class="text-3xl text-center mb-8">Login</h1>
+        <form action="/signup" method="POST" class="flex flex-col items-center">
+            <input type="text" name="userName" placeholder="User Name" class="input input-bordered input-accent w-full max-w-xs mb-8">
+
+            <input type="email" name="email" placeholder="Email" class="input input-bordered input-accent w-full max-w-xs mb-8">
+            
+            <input type="password" name="password" placeholder="Password" class="input input-bordered input-accent w-full max-w-xs mb-8">
+
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" class="input input-bordered input-accent w-full max-w-xs mb-8">
+            <input type="submit" class="btn btn-secondary self-center">
+        </form>
+    </div>
+    
 </body>
 </html>

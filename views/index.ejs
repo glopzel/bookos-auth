@@ -7,26 +7,33 @@
     <title>Document</title>
 
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <main>
         <div class="container">
-            <h1 class="header center blue-text lighten-3">
+            <h1 class="text-center text-5xl my-6">
                 Book Track
             </h1>
-            <h2 class="center blue-text text-lighten-3">Add titles, mark as completed, unmark, and if you hated it just delete it</h2>
-            <div class="row center">
-                <a class="btn-large waves-effect waves-light blue lighten-1" href="/login">Login and manage those books</a>
-                <a class="btn-large waves-effect waves-light orange-lighten-1" href="/signup">Signup</a>
+            <h2 class="text-3xl mb-6">Add titles, mark as completed, unmark, and if you hated it just delete it</h2>
+            <div class="flex justify-center">
+                <a class="btn btn-primary mx-6" href="/login">Login</a>
+                <!-- btn-large waves-effect waves-light orange-lighten-1 -->
+                <a class="btn btn-secondary mx-6" href="/signup">Signup</a>
             </div>
         </div>
         
     </main>
 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 </body>
 </html>
