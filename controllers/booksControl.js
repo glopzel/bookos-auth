@@ -1,7 +1,7 @@
 const Book = require('../models/Books');
 
 module.exports = {
-    // get number of books read maybe
+    // get all books by user
     getBooks: async (req, res) => {
         try {
             const allBooks = await Book.find({userId: req.user.id})
