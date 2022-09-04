@@ -4,7 +4,7 @@ i made a crud app a while ago, this is the same but has a different architecture
 
 ## Preview
 
-<img src="https://ik.imagekit.io/a8p7pl7hs/git-previews/mvc_wkpMoLB5E.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1662250813715" width='500'>
+<img src="https://ik.imagekit.io/a8p7pl7hs/git-previews/mvc_wkpMoLB5E.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1662250813715" width='300'>
 
 There's no live preview 
 
