@@ -1,6 +1,6 @@
-# CRUD with MVC
+# Book Track - Bookos
 
-i made a crud app a while ago, this is the same but has a different architecture and has some extra styling. I have yet to add an API to show real books, but this is the core code of it.
+i made a crud app a while ago, this is the same but has a different architecture and has some nice styling and authentication. 
 
 ## Preview
 
