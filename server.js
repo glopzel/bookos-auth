@@ -15,7 +15,6 @@ const flash = require('express-flash')
 const logger = require('morgan')
 const homeControl = require('./controllers/homeControl')
 
-
 dotenv.config({ path: './config/.env' });
 require('./config/passport')(passport)
 
