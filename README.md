@@ -1,6 +1,6 @@
 # Book Track - Bookos
 
-i made a crud app a while ago, this is the same but has a different architecture and has some nice styling and authentication. 
+I made a crud app a while ago (bookos or chewbookos), this is the same but has a different architecture and has some nice styling and authentication.
 
 ## Preview
 
