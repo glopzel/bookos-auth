@@ -4,13 +4,13 @@ i made a crud app a while ago, this is the same but has a different architecture
 
 ## Preview
 
-![](https://ik.imagekit.io/a8p7pl7hs/git-previews/booktrack_edyxXLD8z.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1661452618574)
+![](https://ik.imagekit.io/a8p7pl7hs/git-previews/mvc_wkpMoLB5E.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1662250813715)
 
 There's no live preview 
 
 ## Tech used
 
-Mongoose/Mongo, Express, EJS, Materialize CSS, bcrypt, express-flash, express-session, morgan, passport, validator.
+Mongoose/Mongo, Express, EJS, Tailwind + daisy ui, bcrypt, express-flash, express-session, morgan, passport and validator.
 
 ## Future plans
 
