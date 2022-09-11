@@ -29,13 +29,10 @@ app.use(logger('dev'))
 // SESSION
 app.use(
     session({
-        // idk this was in the documentation lets trust the process
         secret: 'keyboard cat',
         resave: false,
         saveUninitialized: false,
-        // store: new MongoStore({ mongooseConnection: mongoose.connection }) 
         store: new MongoStore({ 
-            // mongooseConnection: mongoose.connection,
             mongoUrl: process.env.DB_STR
         }) 
     })
