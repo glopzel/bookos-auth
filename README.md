@@ -1,4 +1,4 @@
-# Book Track - Bookos
+# Book Tracker
 
 I made a crud app a while ago (bookos or chewbookos), this is the same but has a different architecture and has some nice styling and authentication.
 
@@ -16,3 +16,4 @@ Mongoose/Mongo, Express, EJS, Tailwind + daisy ui, bcrypt, express-flash, expres
 
 - use a book API to get the picture of the book image and add it to the card
 - rework/improve the code
+- add other strategies for authentication with passport
