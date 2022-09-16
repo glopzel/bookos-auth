@@ -1,11 +1,8 @@
 const express = require('express')
 const app = express()
-// const connectionDB = the mongoose thing on config
 const connectionDB = require('./config/database')
-// ROUTES
 const homeRoute = require('./routes/home')
 const booksRoute = require('./routes/books')
-
 const dotenv = require('dotenv');
 const passport = require('passport')
 const session = require('express-session')
@@ -20,13 +17,16 @@ require('./config/passport')(passport)
 
 connectionDB()
 
+// ejs for views
 app.set('view engine', 'ejs')
 app.use(express.static('public'));
+// body parsing
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
+// logging
 app.use(logger('dev'))
 
-// SESSION
+// SESSION, store the session in mongodb
 app.use(
     session({
         secret: 'keyboard cat',

@@ -42,7 +42,7 @@
         <div class="card-container justify-center">
             <% totalBooks.forEach(element => { %>
             <div class="card w-96 bg-base-100 shadow-xl image-full card-content m-6 <%= element.read === true ? 'border border-green-500': 'border'%>">
-                <!-- on class: <%= element.read === true ? 'bg-success' : 'white'%> -->
+                <!-- if i get the books covers they should go here -->
                 <!-- <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure> -->
                 <div class="card-body" data-id="<%=element._id%>">
                   <h2 class="card-title"><%= element.bookTitle %></h2>
@@ -68,39 +68,7 @@
             <% }) %>
         </div>
         
-
-        <!-- <div class="container">
-            <div class="row">
-                <% totalBooks.forEach(element => { %>
-                    <div class="col s12 m6">
-                        <div class="card">
-                        
-                            <div class="card-content <%= element.read === true ? 'green lighten-4' : 'white'%>" data-id="<%=element._id%>">
-                                <span class="card-title"><%= element.bookTitle %></span>
-                                <span><%= element.bookAuthor %></span>
-                                <p>I am a very simple card. I am good at containing small bits of information.</p>
-                            </div>
-                            <div class="card-action btns-update">
-                                <button class="delete red btn-small">
-                                    <i class="tiny fa fa-times left"></i>DELETE
-                                </button>
-                                <button class="unread lime btn-small <%=element.read === false ? 'hidden' : 'notHidden' %>">
-                                    <i class="tiny fa-solid fa-arrow-rotate-right left"></i>UNREAD
-                                </button>
-                                <button class="read green btn-small <%=element.read === true ? 'hidden' : 'notHidden' %>">
-                                    <i class="tiny fa fa-check left"></i>READ
-                                </button>
-                            </div>
-                    </div>
-                </div>
-                <% }) %>
-            </div> -->
-            
-        <!-- </div> -->
     </main>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="js/script.js"></script>
 </body>
