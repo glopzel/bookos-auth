@@ -16,4 +16,5 @@ Mongoose/Mongo, Express, EJS, Tailwind + daisy ui, bcrypt, express-flash, expres
 
 - use a book API to get each book cover
 - add other strategies for authentication with passport
-- rework/improve the code
+- add feed view
+- fix error pop ups
